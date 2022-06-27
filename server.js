@@ -1,8 +1,14 @@
 import mongoose from 'mongoose';
 import express from 'express';
+import routerCat from './routes/catégories.js';
 const app = express()
-const port = 3000
+const port = 5000
+app.use(express.json());
+app.use(express.urlencoded({extended: true}))
 
+
+//app.use('/toys',routerToys)
+app.use('/categories',routerCat)
 
 // connection à la bdd mongodb
 main().catch(err => console.error(err))
@@ -12,9 +18,6 @@ async function main() {
 
 }
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
 
 
 
