@@ -2,8 +2,10 @@ import mongoose from 'mongoose';
 import express from 'express';
 import routerCat from './routes/catégories.js';
 import routerToys from './routes/toys.js';
+import cors from 'cors'
 const app = express()
 const port = 5000
+app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({extended: true}))
 
