@@ -1,0 +1,27 @@
+{
+  "name": "fullstackmern",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Csylvainc/fullstackMERN.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Csylvainc/fullstackMERN/issues"
+  },
+  "homepage": "https://github.com/Csylvainc/fullstackMERN#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.4.0"
+  },
+  "devDependencies": {
+    "node": "^18.4.0",
+    "nodemon": "^2.0.18"
+  }
+}
