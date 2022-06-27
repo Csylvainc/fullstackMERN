@@ -1,12 +1,12 @@
 import Categories from "../models/category.js"
 
-export async function createCategory(name){
+export function createCategory(name){
     
-    const Category = await new  Category(name)
+    const Category = new Categories(name)
    
-    const result = await Categories.save()
+    const result = Category.save()
     
-    return Category
+    return result
 }
 
 export async function listCategory(){
@@ -35,7 +35,7 @@ export async function updateCategory(name,body){
 export async function deleteOneCategory(name){
     const myCategoryDeleted = await Categories
     
-    .deletOne({name:name})
+    .deleteOne({name:name})
 
     return myCategoryDeleted
 }

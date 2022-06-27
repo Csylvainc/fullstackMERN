@@ -16,7 +16,7 @@ routerCat.get('/:name', async (req, res) => {
 
 routerCat.post('/', async (req, res) => {
     const newCat = await createCategory(req.body)
-    res.send('ok')
+    res.send(newCat)
 })
 
 routerCat.put('/:name', async (req, res) => {
@@ -25,7 +25,7 @@ routerCat.put('/:name', async (req, res) => {
         });
 
 
-routerCat.delete('/:id', function (req, res) {
-    let deletOne= deleteOneCategory(req.params.id)
+routerCat.delete('/:name', function (req, res) {
+    let deletOne= deleteOneCategory(req.params.name)
 })
 export default routerCat

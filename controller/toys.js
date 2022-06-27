@@ -2,11 +2,11 @@ import Toys from "../models/toy.js"
 
 export async function createToy(name){
     
-    const Toy = await new Toy(name)
+    const Toy = await new Toys(name)
    
-    const result = await Toys.save()
+    const result = await Toy.save()
     
-    return Toy
+    return result
 }
 
 export async function listToy(){
@@ -19,9 +19,9 @@ export async function listToy(){
 export async function showOneToy(name){
     const myToy = await Toys
     
-    .findOne({name:name}).exec()
+    .findOne({name:name})
     
-    return myCategory
+    return myToy
 }
 export async function updateToy(name,body){
     const myToyUpdated = await Toys
@@ -35,7 +35,7 @@ export async function updateToy(name,body){
 export async function deleteOneToy(name){
     const myToyDeleted = await Toys
     
-    .deletOne({name:name})
+    .deleteOne({name:name})
 
     return myToyDeleted
 }
