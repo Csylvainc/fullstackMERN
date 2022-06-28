@@ -15,7 +15,7 @@ const App = () => {
      <Navbar />
      <Routes>
        <Route exact path="/" element={<RecordList />} />
-       <Route path="/edit/:id" element={<Edit />} />
+       <Route path="/toys/:name" element={<Edit />} />
        <Route path="/create" element={<Create />} />
      </Routes>
    </div>

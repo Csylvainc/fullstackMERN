@@ -23,14 +23,10 @@ export async function showOneToy(name){
     
     return myToy
 }
-export async function updateToy(name,body){
-    const myToyUpdated = await Toys
-    
-    .findOneAndUpdate({name:name},{name:body})
 
-    return myToyUpdated
+export async function updateToy(name, body) {
+    return await Toys.findOneAndUpdate({name:name}, {...body})
 }
-
 
 export async function deleteOneToy(name){
     const myToyDeleted = await Toys

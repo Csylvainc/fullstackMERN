@@ -21,7 +21,8 @@ routerToys.post('/', async (req, res) => {
 
 routerToys.put('/:name', async (req, res) => {
     console.log(req.params.name);
-    let updateOneToy = await updateToy(req.params.name,req.body.name)
+    let updateOneToy = await updateToy(req.params.name,req.body)
+    res.send(updateOneToy)
         });
 
 
